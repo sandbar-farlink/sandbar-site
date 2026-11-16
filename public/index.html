@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Sandbar Engineering | Testing, Controls and Radio Networks | Charleston, SC</title>
 <meta name="description" content="Sandbar Engineering provides electrical testing, engineering consulting, radio networks, PLC programming and SCADA from Charleston, South Carolina.">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:image" content="https://sandbarengineering.com/og.jpg">
 <link rel="canonical" href="https://sandbarengineering.com/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Sandbar Engineering">
@@ -12,7 +15,7 @@
 <meta property="og:description" content="Testing, engineering consulting, radio networks, PLC programming and SCADA. Charleston, South Carolina.">
 <meta property="og:url" content="https://sandbarengineering.com/">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Organization","name":"Sandbar Engineering","legalName":"Sandbar Consultants, LLC","url":"https://sandbarengineering.com/","email":"david@sandbarengineer.com","address":{"@type":"PostalAddress","addressLocality":"Charleston","addressRegion":"SC","addressCountry":"US"}}
+{"@context":"https://schema.org","@type":"Organization","name":"Sandbar Engineering","legalName":"Sandbar Consultants, LLC","url":"https://sandbarengineering.com/","logo":"https://sandbarengineering.com/logo.png","email":"david@sandbarengineer.com","address":{"@type":"PostalAddress","addressLocality":"Charleston","addressRegion":"SC","addressCountry":"US"}}
 </script>
 <style>
   :root {
@@ -27,10 +30,11 @@
   header { border-bottom: 1px solid var(--line); background: var(--sand); position: sticky; top: 0; z-index: 2; }
   header .wrap { display: flex; align-items: center; justify-content: space-between; height: 4rem; }
   .brand { font-weight: 700; letter-spacing: .02em; color: var(--ink); text-decoration: none; display: flex; align-items: center; gap: .6rem; }
-  .brand svg { width: 28px; height: 28px; }
+  .brand img { width: 36px; height: 36px; display: block; }
   nav a { color: var(--ink); text-decoration: none; margin-left: 1.25rem; font-size: .95rem; }
   nav a:hover { color: var(--tide); }
   .hero { padding: 5rem 0 4rem; background: linear-gradient(180deg, var(--sand) 0%, var(--sand-2) 100%); border-bottom: 1px solid var(--line); }
+  .hero-logo { width: 120px; height: 120px; display: block; margin-bottom: 1.4rem; }
   .eyebrow { text-transform: uppercase; letter-spacing: .12em; font-size: .78rem; color: var(--tide); font-weight: 650; }
   h1 { font-size: clamp(2rem, 4.5vw, 3.1rem); line-height: 1.12; letter-spacing: -.015em; margin: .6rem 0 1rem; max-width: 20ch; }
   .lead { font-size: 1.15rem; color: var(--muted); max-width: 46rem; }
@@ -63,7 +67,7 @@
 <header>
   <div class="wrap">
     <a class="brand" href="/">
-      <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15" fill="#1f5f6b"/><path d="M5 20c3-2 6-2 9 0s6 2 9 0 4-1 4-1v3c-1 1-2 1-4 1-3 0-5-2-9-2s-6 2-9 2z" fill="#f4efe6"/><path d="M16 6v11M16 7l6 9h-6z" stroke="#f4efe6" stroke-width="1.6" fill="#f4efe6" stroke-linejoin="round"/></svg>
+      <img src="/logo.png" alt="" width="36" height="36">
       Sandbar Engineering
     </a>
     <nav><a href="#services">Services</a><a href="#work">Work</a><a href="#approach">Approach</a><a href="#contact">Contact</a></nav>
@@ -73,6 +77,7 @@
 <main>
   <div class="hero">
     <div class="wrap">
+      <img class="hero-logo" src="/logo.png" alt="Sandbar Engineering logo" width="120" height="120">
       <span class="eyebrow">Charleston, South Carolina</span>
       <h1>Testing, controls, and radio networks for facilities that have to keep running.</h1>
       <p class="lead">Sandbar Engineering provides electrical testing, engineering consulting, radio networks, PLC programming, and SCADA for government, utility, and industrial sites.</p>
