@@ -1,3 +1,3 @@
 # sandbar-site
 
-One static page for sandbarengineer.com. No build step. Cloudflare Pages serves `public/`.
+Static site for sandbarengineering.com (sandbarengineer.com redirects here). No build step. Cloudflare Pages serves `public/`.

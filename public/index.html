@@ -3,32 +3,165 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sandbar Engineering</title>
-<meta name="description" content="Sandbar Engineering, Charleston, South Carolina.">
-<link rel="canonical" href="https://sandbarengineer.com/">
+<title>Sandbar Engineering | Testing, Controls and Radio Networks | Charleston, SC</title>
+<meta name="description" content="Sandbar Engineering provides electrical testing, engineering consulting, radio networks, PLC programming and SCADA from Charleston, South Carolina.">
+<link rel="canonical" href="https://sandbarengineering.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sandbar Engineering">
+<meta property="og:title" content="Sandbar Engineering">
+<meta property="og:description" content="Testing, engineering consulting, radio networks, PLC programming and SCADA. Charleston, South Carolina.">
+<meta property="og:url" content="https://sandbarengineering.com/">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"Sandbar Engineering","legalName":"Sandbar Consultants, LLC","url":"https://sandbarengineering.com/","email":"david@sandbarengineer.com","address":{"@type":"PostalAddress","addressLocality":"Charleston","addressRegion":"SC","addressCountry":"US"}}
+</script>
 <style>
-  :root { color-scheme: light dark; --fg:#1d2a33; --muted:#5b6b75; --bg:#f6f3ee; --line:#d9d2c6; }
-  @media (prefers-color-scheme: dark) { :root { --fg:#e9e6e0; --muted:#a3adb3; --bg:#14191d; --line:#2c353b; } }
-  * { box-sizing: border-box; margin: 0; }
-  body { min-height: 100vh; display: grid; place-items: center; background: var(--bg); color: var(--fg);
-         font: 17px/1.55 system-ui, -apple-system, "Segoe UI", sans-serif; padding: 2rem; }
-  main { max-width: 34rem; width: 100%; }
-  h1 { font-size: 2rem; font-weight: 650; letter-spacing: -0.01em; }
-  .legal { color: var(--muted); font-size: .95rem; margin-top: .25rem; }
-  hr { border: 0; border-top: 1px solid var(--line); margin: 1.5rem 0; }
-  a { color: inherit; }
-  footer { color: var(--muted); font-size: .85rem; margin-top: 2rem; }
+  :root {
+    --sand: #f4efe6; --sand-2: #e9e1d2; --ink: #14232c; --muted: #52636d;
+    --tide: #1f5f6b; --tide-2: #174a54; --line: #d8cfbf; --card: #fbf8f2;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--sand); color: var(--ink); font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  a { color: var(--tide); }
+  .wrap { max-width: 68rem; margin: 0 auto; padding: 0 1.25rem; }
+  header { border-bottom: 1px solid var(--line); background: var(--sand); position: sticky; top: 0; z-index: 2; }
+  header .wrap { display: flex; align-items: center; justify-content: space-between; height: 4rem; }
+  .brand { font-weight: 700; letter-spacing: .02em; color: var(--ink); text-decoration: none; display: flex; align-items: center; gap: .6rem; }
+  .brand svg { width: 28px; height: 28px; }
+  nav a { color: var(--ink); text-decoration: none; margin-left: 1.25rem; font-size: .95rem; }
+  nav a:hover { color: var(--tide); }
+  .hero { padding: 5rem 0 4rem; background: linear-gradient(180deg, var(--sand) 0%, var(--sand-2) 100%); border-bottom: 1px solid var(--line); }
+  .eyebrow { text-transform: uppercase; letter-spacing: .12em; font-size: .78rem; color: var(--tide); font-weight: 650; }
+  h1 { font-size: clamp(2rem, 4.5vw, 3.1rem); line-height: 1.12; letter-spacing: -.015em; margin: .6rem 0 1rem; max-width: 20ch; }
+  .lead { font-size: 1.15rem; color: var(--muted); max-width: 46rem; }
+  .btns { margin-top: 1.8rem; display: flex; gap: .8rem; flex-wrap: wrap; }
+  .btn { display: inline-block; padding: .75rem 1.2rem; border-radius: 8px; background: var(--tide); color: #fff; text-decoration: none; font-weight: 600; }
+  .btn:hover { background: var(--tide-2); }
+  .btn.ghost { background: transparent; color: var(--tide); border: 1px solid var(--tide); }
+  section { padding: 4rem 0; }
+  h2 { font-size: clamp(1.5rem, 3vw, 2rem); line-height: 1.2; margin: .5rem 0 1.5rem; max-width: 30ch; }
+  .grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 1.4rem; }
+  .card h3 { font-size: 1.1rem; margin-bottom: .45rem; }
+  .card p, .card li { color: var(--muted); font-size: .97rem; }
+  .card ul { list-style: none; margin-top: .6rem; }
+  .card li { padding-left: 1rem; position: relative; margin: .2rem 0; }
+  .card li::before { content: ""; position: absolute; left: 0; top: .7em; width: 6px; height: 6px; border-radius: 50%; background: var(--tide); }
+  .alt { background: var(--sand-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .two { display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); align-items: start; }
+  .two p + p { margin-top: 1rem; }
+  .contact { text-align: left; }
+  .contact .card { max-width: 36rem; }
+  .contact dt { font-weight: 650; margin-top: .8rem; }
+  .contact dd { color: var(--muted); }
+  footer { border-top: 1px solid var(--line); padding: 2rem 0; color: var(--muted); font-size: .88rem; }
+  footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: .5rem; }
+  @media (max-width: 640px) { nav { display: none; } .hero { padding: 3.5rem 0 3rem; } }
 </style>
 </head>
 <body>
+<header>
+  <div class="wrap">
+    <a class="brand" href="/">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15" fill="#1f5f6b"/><path d="M5 20c3-2 6-2 9 0s6 2 9 0 4-1 4-1v3c-1 1-2 1-4 1-3 0-5-2-9-2s-6 2-9 2z" fill="#f4efe6"/><path d="M16 6v11M16 7l6 9h-6z" stroke="#f4efe6" stroke-width="1.6" fill="#f4efe6" stroke-linejoin="round"/></svg>
+      Sandbar Engineering
+    </a>
+    <nav><a href="#services">Services</a><a href="#work">Work</a><a href="#approach">Approach</a><a href="#contact">Contact</a></nav>
+  </div>
+</header>
+
 <main>
-  <h1>Sandbar Engineering</h1>
-  <p class="legal">Sandbar Consultants, LLC</p>
-  <hr>
-  <p>Charleston, South Carolina</p>
-  <p><a href="mailto:david@sandbarengineer.com">david@sandbarengineer.com</a></p>
-  <footer>&copy; <span id="y">2026</span> Sandbar Consultants, LLC</footer>
+  <div class="hero">
+    <div class="wrap">
+      <span class="eyebrow">Charleston, South Carolina</span>
+      <h1>Testing, controls, and radio networks for facilities that have to keep running.</h1>
+      <p class="lead">Sandbar Engineering provides electrical testing, engineering consulting, radio networks, PLC programming, and SCADA for government, utility, and industrial sites.</p>
+      <div class="btns">
+        <a class="btn" href="#contact">Start a project</a>
+        <a class="btn ghost" href="#services">See services</a>
+      </div>
+    </div>
+  </div>
+
+  <section id="services">
+    <div class="wrap">
+      <span class="eyebrow">Services</span>
+      <h2>Five lines of work, often on the same job.</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Testing</h3>
+          <p>Field testing that finds the problem and documents the result.</p>
+          <ul><li>Acceptance and functional testing</li><li>Troubleshooting existing systems</li><li>Documented readings and findings</li></ul>
+        </article>
+        <article class="card">
+          <h3>Engineering consulting</h3>
+          <p>Practical engineering for owners and contractors.</p>
+          <ul><li>Scope and condition assessments</li><li>Design review and recommendations</li><li>Support through construction and startup</li></ul>
+        </article>
+        <article class="card">
+          <h3>Radio networks</h3>
+          <p>Wireless links that carry control and monitoring data where wire is not practical.</p>
+          <ul><li>Site-to-site telemetry links</li><li>Path planning and site surveys</li><li>Installation support and testing</li></ul>
+        </article>
+        <article class="card">
+          <h3>PLC programming</h3>
+          <p>Control logic written for the process and the people who run it.</p>
+          <ul><li>New programs and modifications</li><li>HMI screens</li><li>Startup and commissioning</li></ul>
+        </article>
+        <article class="card">
+          <h3>SCADA</h3>
+          <p>Monitoring and control across sites, from field panels to the operator screen.</p>
+          <ul><li>Integration of remote sites</li><li>Alarming and data collection</li><li>Upgrades to existing systems</li></ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="work" class="alt">
+    <div class="wrap two">
+      <div>
+        <span class="eyebrow">Recent work</span>
+        <h2>Water well controls at Shaw Air Force Base.</h2>
+      </div>
+      <div>
+        <p>Sandbar supports well controls at Shaw Air Force Base, including control panel work, equipment replacement, and integration of wells into the site's monitoring.</p>
+        <p>Federal work means clear scope, complete documentation, and work that holds up after the crew leaves. That is how every Sandbar job is run.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="approach">
+    <div class="wrap">
+      <span class="eyebrow">Approach</span>
+      <h2>Small firm. Direct answers. Field-tested work.</h2>
+      <div class="grid">
+        <article class="card"><h3>Start with the site</h3><p>The existing conditions and the operators' needs set the design, not a canned package.</p></article>
+        <article class="card"><h3>Clear scope and price</h3><p>You know what is being done, what it costs, and what you get back.</p></article>
+        <article class="card"><h3>Documentation that lasts</h3><p>Drawings, settings, and test records left in a form the next person can use.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="alt contact">
+    <div class="wrap">
+      <span class="eyebrow">Contact</span>
+      <h2>Send the scope. Drawings help.</h2>
+      <div class="card">
+        <dl>
+          <dt>Email</dt><dd><a href="mailto:david@sandbarengineer.com">david@sandbarengineer.com</a></dd>
+          <dt>Location</dt><dd>Charleston, South Carolina</dd>
+        </dl>
+      </div>
+    </div>
+  </section>
 </main>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; <span id="y">2026</span> Sandbar Consultants, LLC, doing business as Sandbar Engineering</span>
+    <span>Charleston, SC</span>
+  </div>
+</footer>
 <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
